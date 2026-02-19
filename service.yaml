@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: invoiceflow
+spec:
+  type: LoadBalancer
+  selector:
+    app: invoiceflow
+  ports:
+    - port: 80
+      targetPort: 3000
